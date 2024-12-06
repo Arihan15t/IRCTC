@@ -17,7 +17,7 @@ const dotenv = require("dotenv");
 const apiKeyAuth = require("../middlewares/apiKeyAuthorization");
 const { Op } = require("sequelize");
 
-const { Pool } = require('pg');
+// const { Pool } = require('pg');
 
 dotenv.config();
 
@@ -26,13 +26,13 @@ const PORT = 3000;
 
 app.use(bodyParser.json());
 
-const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'irctc',
-    password: 'arihant',
-    port: 5432,
-  });
+// const pool = new Pool({
+//     user: 'postgres',
+//     host: 'localhost',
+//     database: 'irctc',
+//     password: 'arihant',
+//     port: 5432,
+//   });
 
 sequelize
   .authenticate()
